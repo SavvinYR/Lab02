@@ -1,0 +1,309 @@
+ярослав@YS-LAPTOP MINGW32 ~/Desktop/Lab02
+$ mkdir Alice
+
+ярослав@YS-LAPTOP MINGW32 ~/Desktop/Lab02
+$ mkdir Bob
+
+ярослав@YS-LAPTOP MINGW32 ~/Desktop/Lab02
+$ cd Alice
+
+ярослав@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice
+$ mkdir project
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice
+$ cd project
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project
+$ cd ..
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice
+$ cd project
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ ls -A
+.git/
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ ls -A
+.git/
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git config user.name 'Alice (SavvinYR)'
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git config user.email 'yaroslav.savvin@mail.ru'
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ ls -A
+.git/  main.cpp  project.cbp
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        bin/
+        main.cpp
+        obj/
+        project.cbp
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git add main.cpp
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git add main.cbp
+fatal: pathspec 'main.cbp' did not match any files
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ ls -A
+.git/  bin/  main.cpp  obj/  project.cbp
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        bin/
+        main.cpp
+        obj/
+        project.cbp
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git add main.cpp
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git add main.cbp
+fatal: pathspec 'main.cbp' did not match any files
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ ls -A
+.git/  bin/  main.cpp  obj/  project.cbp
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ ^C
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git commit -m 'code: caaioiaea i?ia?aiiu'
+[master (root-commit) 7751db2] code: caaioiaea i?ia?aiiu
+ 1 file changed, 9 insertions(+)
+ create mode 100644 main.cpp
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git add project.cbp
+warning: LF will be replaced by CRLF in project.cbp.
+The file will have its original line endings in your working directory
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git commit -m 'build: aiaaaeai oaee i?iaeoa'
+[master 8f67d01] build: aiaaaeai oaee i?iaeoa
+ 1 file changed, 40 insertions(+)
+ create mode 100644 project.cbp
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   main.cpp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        bin/
+        obj/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        Untitled2.c
+        project.depend
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git log --oneline --decorate
+54340ea (HEAD -> master) build: Auaia noiiu e ?aciinoe 2 ?enae
+ed83fb3 build: Auaia noiiu 2  ?enae
+8f67d01 build: aiaaaeai oaee i?iaeoa
+7751db2 code: caaioiaea i?ia?aiiu
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git log --stat
+commit 54340eaae6f5140c22208262966b426391cd725f (HEAD -> master)
+Author: Alice (SavvinYR) <yaroslav.savvin@mail.ru>
+Date:   Mon Feb 28 16:42:00 2022 +0300
+
+    build: Auaia noiiu e ?aciinoe 2 ?enae
+
+ main.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit ed83fb3efa5eacc558b8138e23ed76d32a55d73a
+Author: Alice (SavvinYR) <yaroslav.savvin@mail.ru>
+Date:   Mon Feb 28 16:38:16 2022 +0300
+
+    build: Auaia noiiu 2  ?enae
+
+ main.cpp | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+commit 8f67d01429a69af1a0ba1a5e371100e49204b67e
+Author: Alice (SavvinYR) <yaroslav.savvin@mail.ru>
+Date:   Mon Feb 28 16:14:24 2022 +0300
+
+    build: aiaaaeai oaee i?iaeoa
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git log --grep "build"
+commit 54340eaae6f5140c22208262966b426391cd725f (HEAD -> master)
+Author: Alice (SavvinYR) <yaroslav.savvin@mail.ru>
+Date:   Mon Feb 28 16:42:00 2022 +0300
+
+    build: Auaia noiiu e ?aciinoe 2 ?enae
+
+commit ed83fb3efa5eacc558b8138e23ed76d32a55d73a
+Author: Alice (SavvinYR) <yaroslav.savvin@mail.ru>
+Date:   Mon Feb 28 16:38:16 2022 +0300
+
+    build: Auaia noiiu 2  ?enae
+
+commit 8f67d01429a69af1a0ba1a5e371100e49204b67e
+Author: Alice (SavvinYR) <yaroslav.savvin@mail.ru>
+Date:   Mon Feb 28 16:14:24 2022 +0300
+
+    build: aiaaaeai oaee i?iaeoa
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git log -- project.cbp
+commit 8f67d01429a69af1a0ba1a5e371100e49204b67e
+Author: Alice (SavvinYR) <yaroslav.savvin@mail.ru>
+Date:   Mon Feb 28 16:14:24 2022 +0300
+
+    build: aiaaaeai oaee i?iaeoa
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git show HEAD~1
+commit ed83fb3efa5eacc558b8138e23ed76d32a55d73a
+Author: Alice (SavvinYR) <yaroslav.savvin@mail.ru>
+Date:   Mon Feb 28 16:38:16 2022 +0300
+
+    build: Auaia noiiu 2  ?enae
+
+diff --git a/main.cpp b/main.cpp
+index b4392ec..e33c1e1 100644
+--- a/main.cpp
++++ b/main.cpp
+@@ -3,7 +3,8 @@
+ using namespace std;
+
+ int main()
+-{
+-    cout << "Hello world!" << endl;
+-    return 0;
++{int a, b;
++   cout << "Enter A and B: ";
++   cin>> a >> b;
++   cout << "A + B = " << a + b << '\n';
+ }
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git diff
+diff --git a/main.cpp b/main.cpp
+index bed447e..f515108 100644
+--- a/main.cpp
++++ b/main.cpp
+@@ -6,5 +6,5 @@ int main()
+ {int a, b;
+    cout << "Enter A and B: ";
+    cin>> a >> b;
+-   cout << "A + B = " << a + b << '\n' << "A - B = " << a - b << '\n';
++   cout << "A + B = " << a + b << '\n' << "A - B = " << a - b << '\n' << "A * B = " << a * b << '\n'
+ }
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git diff HEAD~2 HEAD
+diff --git a/main.cpp b/main.cpp
+index b4392ec..bed447e 100644
+--- a/main.cpp
++++ b/main.cpp
+@@ -3,7 +3,8 @@
+ using namespace std;
+
+ int main()
+-{
+-    cout << "Hello world!" << endl;
+-    return 0;
++{int a, b;
++   cout << "Enter A and B: ";
++   cin>> a >> b;
++   cout << "A + B = " << a + b << '\n' << "A - B = " << a - b << '\n';
+ }
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git commit -m "build: Auaia i?iecaaaaiey 2 ?enae"
+[master 1b28f51] build: Auaia i?iecaaaaiey 2 ?enae
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git reset --hard HEAD~1
+HEAD is now at 54340ea build: Auaia noiiu e ?aciinoe 2 ?enae
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ git checkout HEAD -- main.cpp
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/??ineaa/.ssh/id_rsa):
+/c/Users/??ineaa/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/??ineaa/.ssh/id_rsa.
+Your public key has been saved in /c/Users/??ineaa/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:9wbtxtmtQ6hsjCTusvpnfTYW5JOV3SJb4c0BYIwr0+U ??ineaa@YS-LAPTOP
+The key's randomart image is:
++---[RSA 2048]----+
+|          oo...  |
+|         ..o  .. |
+|        . +  + =.|
+|       o o.E+ = +|
+|        Sooo.= . |
+|      . ..==oo.. |
+|     . + + +B.. .|
+|    . + o Xo  .. |
+|  .oo*.  = .  .. |
++----[SHA256]-----+
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ eval "$(ssh-agent)"
+Agent pid 5948
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ ssh-add
+Enter passphrase for /c/Users/??ineaa/.ssh/id_rsa:
+Identity added: /c/Users/??ineaa/.ssh/id_rsa (??ineaa@YS-LAPTOP)
+
+??ineaa@YS-LAPTOP MINGW32 ~/Desktop/Lab02/Alice/project (master)
+$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC08EVG683w7AwO4otFUFfppS8am8OvoPxP7afF9bJzRSr3clB0RZ9n6QRe2sG7RNMfwpFpZ7j2MOdeZasjda2rmyIQ1FXrQr6x0yfBDHHHRIIp3AypEcJnpp5i7hSJ63tcXHdeuoHybo1MWmz90Uspzvfhjrycak9WzKRVOR77ZLYRONFPryk47LY9eoT49OLjEWMzUrmzAXDPw8SLcmLNauR7tWgRjXQJExvQ8HVviLQAv7kNqJHqPy/D8qqJ3zt+x1zPCatwwntRUrhOTeTtqpQcZ96OdZbyoALSKu/7vc5ELLrOKl5KrSijBWCutn27FUKf4EX271VgzrhEsAun ??ineaa@YS-LAPTOP
